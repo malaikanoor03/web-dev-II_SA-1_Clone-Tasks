@@ -1,0 +1,226 @@
+body {
+    background-color: #f0f0f0; /* Sets the background color of the body */
+    font-family: 'Lato', sans-serif; /* Sets the font family for the body text */
+    margin: 0; /* Removes any default margin from the body */
+    padding: 0; /* Removes any default padding from the body */
+}
+
+.header {
+    background-color: white; /* Sets the background color of the header */
+    padding: 16px; /* Adds padding inside the header */
+    display: flex; /* Uses flexbox to arrange child elements in a row */
+    justify-content: space-between; /* Spaces out the children elements evenly */
+    align-items: center; /* Vertically aligns the children elements in the center */
+    filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.2)); /* Adds a subtle shadow to the header */
+}
+
+.header h1 {
+    margin: 0; /* Removes any default margin from the h1 */
+    font-size: 2em; /* Sets the font size of the header title */
+    font-family: 'Teko', sans-serif; /* Sets the font for the header title */
+}
+
+.nav {
+    display: flex; /* Uses flexbox to arrange the navigation links in a row */
+    gap: 16px; /* Adds space between each navigation link */
+}
+
+.nav a {
+    text-decoration: none; /* Removes underline from the navigation links */
+    color: black; /* Sets the text color of the links to black */
+    font-family: 'Lato', sans-serif; /* Sets the font family for the navigation links */
+}
+
+.search {
+    border: 2px solid black; /* Adds a 2px solid black border around the search button */
+    padding: 5px 10px; /* Adds padding inside the search button */
+    font-size: 2em; /* Sets the font size of the search button text */
+    font-family: 'Teko', sans-serif; /* Sets the font family for the search button */
+    border-radius: 8px; /* Rounds the corners of the search button */
+    cursor: pointer; /* Changes the cursor to a pointer when hovered over the search button */
+}
+
+.search:hover {
+    background-color: #0056b3; /* Changes the background color when the search button is hovered over */
+    color: white; /* Changes the text color to white on hover */
+}
+
+
+main {
+    padding: 32px; /* Adds padding inside the main section */
+    max-width: 900px; /* Limits the maximum width of the main section */
+    margin: 0 auto; /* Centers the main section horizontally */
+}
+
+.container {
+    display: flex; /* Uses flexbox to arrange the container's children */
+    flex-direction: column; /* Arranges the children in a vertical column */
+    align-items: center; /* Centers the children horizontally */
+    gap: 32px; /* Adds space between each child element */
+}
+
+
+.movie-card {
+    background-color: #fff; /* Sets the background color of the movie cards to white */
+    border-radius: 8px; /* Rounds the corners of the movie cards */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow to the movie cards */
+    padding: 16px; /* Adds padding inside the movie card */
+    margin-bottom: 16px; /* Adds space below each movie card */
+    font-size: 1.5em; /* Sets the font size inside the movie card */
+    text-align: center; /* Centers the text inside the movie card */
+    gap: 16px; /* Adds space between the elements inside the movie card */
+}
+
+.movie-title {
+    font-weight: bold; /* Makes the movie title bold */
+    font-family: 'Teko', sans-serif; /* Sets the font for the movie title */
+    font-size: 1.2em; /* Sets the font size for the movie title */
+}
+
+.movie-description {
+    font-family: 'Lato', sans-serif; /* Sets the font for the movie description */
+    font-size: 1em; /* Sets the font size for the movie description */
+    text-align: left; /* Aligns the text to the left inside the movie description */
+}
+
+.movie-poster {
+    width: 100%; /* Makes the movie poster image fill the full width of the card */
+    height: 300px; /* Sets the height of the movie poster */
+    border-radius: 8px; /* Rounds the corners of the movie poster */
+    object-fit: cover; /* Ensures the image covers the space without distorting */
+    margin-bottom: 10px; /* Adds space below the image */
+}
+
+
+.watch-now {
+    width: 100%; /* Makes the watch now button take up the full width */
+    background-color: #4CAF50; /* Sets the background color of the watch now button */
+    color: white; /* Sets the text color of the button to white */
+    border: none; /* Removes the border from the button */
+    cursor: pointer; /* Changes the cursor to a pointer when hovering over the button */
+    font-family: 'Teko', sans-serif; /* Sets the font for the button text */
+    font-size: 2em; /* Sets the font size of the button text */
+    transition: background-color 0.3s ease; /* Adds a smooth transition for the background color change */
+    padding: 8px; /* Adds padding inside the button */
+    border-radius: 20px; /* Rounds the corners of the button */
+    margin-top: 16px; /* Adds space above the button */
+}
+
+.watch-now:hover {
+    background-color: #3e8e41; /* Changes the background color when the button is hovered over */
+}
+
+@media (min-width: 720px) {
+    .header h1 {
+        font-size: 3em; /* Increases the font size of the header title on larger screens */
+    }
+
+    .container {
+        padding: 32px; /* Adds padding inside the container on larger screens */
+    }
+
+    .two-card-row {
+        display: flex; /* Uses flexbox for the two-card row */
+        gap: 32px; /* Adds space between the movie cards */
+        justify-content: space-between; /* Spaces out the cards evenly */
+    }
+
+    .two-card-row .movie-card {
+        width: 48%; /* Sets each movie card to take up 48% of the row width */
+    }
+    .last-card{
+        display: none; /* Hides the last card on larger screens */
+    }
+}
+
+
+
+.first-row-layout .movie-card-content {
+    display: flex; /* Uses flexbox to arrange the movie card content */
+    justify-content: space-between; /* Spaces out the content evenly */
+    align-items: center; /* Vertically aligns the content in the center */
+    gap: 16px; /* Adds space between the content elements */
+}
+
+.first-row-layout .movie-description {
+    flex: 1; /* Allows the movie description to take up available space */
+    text-align: left; /* Aligns the movie description to the left */
+    max-width: 100%; /* Ensures the description does not exceed the width of the card */
+}
+
+.first-row-layout .watch-now {
+    align-self: flex-start; /* Aligns the watch now button to the start of the container */
+    font-size: 1.2em; /* Sets the font size of the watch now button */
+    padding: 8px 16px; /* Adds padding inside the button */
+    width: 280px; /* Sets the width of the button */
+    height: 220px; /* Sets the height of the button */
+    border-radius: 20px; /* Rounds the corners of the button */
+}
+
+
+.horizontal-layout {
+    display: flex; /* Uses flexbox to arrange the elements in a row */
+    gap: 32px; /* Adds space between the movie poster and text */
+    align-items: flex-start; /* Aligns items to the start of the container */
+    text-align: left; /* Aligns the text inside the card to the left */
+}
+
+.horizontal-layout .movie-poster {
+    width: 100%; /* Makes the movie poster fill the full width of the card */
+    height: auto; /* Ensures the height adjusts proportionally */
+    max-height: 300px; /* Limits the maximum height of the movie poster */
+}
+
+.horizontal-layout .text-content {
+    width: 100%; /* Makes the text content fill the full width */
+}
+        
+@media (max-width: 720px) {
+    .nav a {
+        display: none; /* Hides the navigation links on smaller screens */
+    }
+}
+
+@media (min-width: 720px) and (max-width: 1024px) {
+    .first-row-layout{
+        display: none; /* Hides the first row layout on medium-sized screens */
+    }
+    .three-card-row{
+        display: flex; /* Uses flexbox to arrange the movie cards in a row */
+        gap: 32px; /* Adds space between the movie cards */
+        justify-content: space-between; /* Spaces the cards evenly */
+    }
+    .last-card{
+        display: contents; /* Makes the last card visible again on medium screens */
+    }
+    .four-card-row{
+        display: flex; /* Uses flexbox to arrange the movie cards in a row */
+        gap: 32px; /* Adds space between the movie cards */
+        justify-content: space-between; /* Spaces the cards evenly */
+    }
+    .whole-card{
+        display: none; /* Hides the whole card layout on medium screens */
+    }
+    .movie-description{
+        height: 42%; /* Sets the height of the movie description */
+    }
+    .movie-card{
+        padding-bottom: 8vw; /* Adds padding to the bottom of the movie card */
+    }
+}
+
+@media (max-width: 767px){
+    .last-card{
+        display: none; /* Hides the last card on smaller screens */
+    }
+    .whole-card{
+        display: none; /* Hides the whole card layout on smaller screens */
+    }
+
+}
+
+@media (min-width : 1024px){
+    .tab-card{
+        display: none; /* Hides the tab card layout on larger screens */
+    }
+}
