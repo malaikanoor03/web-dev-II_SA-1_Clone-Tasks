@@ -1,0 +1,291 @@
+body {
+    background-color: #e9e9e9; /* Sets the background color of the body */
+    font-family: 'Josefin Sans', sans-serif; /* Sets the font family for the body text */
+    margin: 0; /* Removes default margin around the body */
+    padding: 0; /* Removes default padding around the body */
+    color: #333; /* Sets the text color to a dark gray */
+}
+
+header {
+    padding-bottom: -10%; /* Adds negative padding to the bottom of the header (potentially for alignment) */
+    text-align: center; /* Centers the content in the header */
+}
+
+.logo {
+    width: 80px; /* Sets the width of the logo */
+}
+
+main {
+    background-color: white; /* Sets the background color of the main section to white */
+    margin: 12px; /* Adds 12px margin around the main section */
+    padding: 12px; /* Adds 12px padding inside the main section */
+    border-radius: 8px; /* Rounds the corners of the main section */
+    max-width: 1000px; /* Limits the maximum width of the main section */
+    margin-left: 50px; /* Adds 50px left margin */
+    margin-right: 50px; /* Adds 50px right margin */
+}
+
+h1 {
+    font-family: 'Protest Guerrilla', sans-serif; /* Sets the font for the h1 element */
+    font-size: 2em; /* Sets the font size of h1 */
+    margin-bottom: 12px; /* Adds 12px margin below the h1 */
+    color: #14181d; /* Sets the text color of h1 to a dark shade */
+}
+
+h2 {
+    font-family: 'Protest Guerrilla', sans-serif; /* Sets the font for h2 */
+    font-size: 1.5em; /* Sets the font size of h2 */
+    margin-top: 24px; /* Adds 24px margin above the h2 */
+    margin-bottom: 12px; /* Adds 12px margin below the h2 */
+    color: #14181d; /* Sets the text color of h2 to a dark shade */
+}
+
+.first-paragraph {
+    font-size: 1.2em; /* Sets the font size of the first paragraph */
+    margin-bottom: 12px; /* Adds 12px margin below the first paragraph */
+}
+
+p {
+    line-height: 1.6; /* Sets the line height for paragraphs to 1.6 for better readability */
+    margin-bottom: 12px; /* Adds 12px margin below each paragraph */
+}
+
+.author-photo {
+    width: 200px; /* Sets the width of the author's photo */
+    border-radius: 50%; /* Makes the photo circular */
+    margin-top: 12px; /* Adds 12px margin above the photo */
+}
+
+footer {
+    background-color: #14181d; /* Sets the background color of the footer to dark */
+    color: white; /* Sets the text color of the footer to white */
+    text-align: center; /* Centers the text in the footer */
+    padding: 20px; /* Adds 20px padding inside the footer */
+    margin-top: 20px; /* Adds 20px margin above the footer */
+}
+
+/* Flexbox layout for the heading sections to appear next to each other */
+.heading-row {
+    display: flex; /* Uses flexbox to arrange elements in a row */
+    gap: 20px; /* Adds 20px gap between each heading section */
+    justify-content: space-between; /* Distributes heading sections evenly */
+    flex-wrap: wrap; /* Allows items to wrap onto the next line if needed */
+    column-count: 3; /* Attempts to create a 3-column layout for the heading sections */
+}
+
+.heading-section {
+    flex: 1; /* Makes each heading section flexible and takes up available space */
+    min-width: 250px; /* Sets a minimum width of 250px for each section */
+}
+
+.heading-section h2 {
+    margin: 0; /* Removes any default margin from h2 */
+    font-size: 1.5em; /* Sets the font size for h2 inside heading sections */
+    font-family: 'Protest Guerrilla', sans-serif; /* Uses the specified font for h2 */
+}
+
+.heading-section p {
+    margin-top: 8px; /* Adds 8px margin above paragraph inside heading sections */
+    font-size: 1em; /* Sets the font size of paragraph inside heading sections */
+}
+
+/* Large Mobile Styles */
+@media (min-width: 540px) {
+    header {
+        padding: 20px; /* Increases padding in the header on larger screens */
+    }
+    main {
+        margin: 20px; /* Increases margin around the main section on larger screens */
+        padding: 20px; /* Increases padding inside the main section on larger screens */
+    }
+}
+
+/* Tablet Styles */
+@media (min-width: 720px) {
+    header {
+        padding: 30px; /* Increases padding in the header for tablet screens */
+    }
+    main {
+        margin: 30px; /* Increases margin around the main section for tablet screens */
+        padding: 30px; /* Increases padding inside the main section for tablet screens */
+    }
+    .logo {
+        width: 80px; /* Maintains the logo width at 80px for tablet screens */
+    }
+}
+
+@media (min-width: 1024px) {
+    header {
+        padding: 50px; /* Increases header padding for large screens */
+        margin-bottom: -5vw; /* Adds negative margin below the header */
+    }
+    .logo {
+        width: 200px; /* Increases the width of the logo for larger screens */
+    }
+    main {
+        margin: 50px; /* Increases margin around the main section for larger screens */
+        padding: 50px; /* Increases padding inside the main section for larger screens */
+    }
+    h1 {
+        font-size: 4em; /* Increases font size of h1 on larger screens */
+    }
+    .first-paragraph {
+        font-size: 1.5em; /* Increases font size of the first paragraph on larger screens */
+    }
+}
+
+nav a {
+    text-decoration: none; /* Removes underline from navigation links */
+    color: #14181d; /* Sets the text color of the navigation links to dark */
+}
+
+nav {
+    display: flex; /* Uses flexbox to arrange navigation links in a row */
+    justify-content: space-evenly; /* Distributes navigation links evenly across the container */
+}
+
+.image-container {
+    display: grid; /* Uses grid layout to arrange images */
+    gap: 10px; /* Adds 10px gap between images */
+    width: 100%; /* Makes the container take up the full width */
+    grid-template-rows: repeat(2, 1fr); /* Creates 2 rows for the images */
+}
+
+.featured-album {
+    grid-column: 1 / 2; /* Positions the featured album in the first column */
+    grid-row: 1 / 3; /* Makes the featured album span both rows */
+    width: 100%; /* Sets the width of the featured album to 100% */
+    height: 95%; /* Sets the height of the featured album to 95% */
+    object-fit: cover; /* Ensures the image fits without distortion */
+}
+
+.album-cover {
+    width: 90%; /* Sets the width of the album cover to 90% */
+    height: 90%; /* Sets the height of the album cover to 90% */
+    object-fit: cover; /* Ensures the image fits without distortion */
+}
+
+.album-cover:nth-child(2) {
+    grid-column: 2 / 3; /* Positions the second album cover in the second column */
+    grid-row: 1 / 2; /* Positions the second album cover in the first row */
+}
+
+.album-cover:nth-child(3) {
+    grid-column: 2 / 3; /* Positions the third album cover in the second column */
+    grid-row: 2 / 3; /* Positions the third album cover in the second row */
+}
+
+.album-cover:nth-child(4) {
+    grid-column: 3 / 4; /* Positions the fourth album cover in the third column */
+    grid-row: 1 / 2; /* Positions the fourth album cover in the first row */
+}
+
+.album-cover:nth-child(5) {
+    grid-column: 3 / 4; /* Positions the fifth album cover in the third column */
+    grid-row: 2 / 3; /* Positions the fifth album cover in the second row */
+}
+
+.author-container {
+    display: flex; /* Uses flexbox to arrange author content */
+    justify-content: center; /* Centers the author content horizontally */
+    align-items: center; /* Centers the author content vertically */
+    padding: 20px; /* Adds padding inside the author container */
+}
+
+.author-content {
+    display: flex; /* Uses flexbox for arranging author content */
+    gap: 5%; /* Adds 5% gap between items inside author content */
+    align-items: center; /* Vertically aligns items in the author content */
+    width: 74%; /* Sets the width of the author content */
+    justify-content: center; /* Centers the items horizontally */
+    text-align: center; /* Centers the text inside author content */
+}
+
+.author-text {
+    flex: 1; /* Makes the author text flexible, taking available space */
+}
+
+.author-photo-container {
+    display: flex; /* Uses flexbox to arrange the author photo */
+    justify-content: center; /* Centers the author photo horizontally */
+    align-items: center; /* Centers the author photo vertically */
+}
+
+.author-photo {
+    max-width: 100%; /* Ensures the photo width doesn't exceed its container */
+    height: auto; /* Adjusts the height automatically to maintain aspect ratio */
+    border-radius: 50%; /* Makes the photo circular */
+    width: 150px; /* Sets the width of the author photo */
+    height: 150px; /* Sets the height of the author photo */
+}
+
+/* Responsive styles for small screens */
+@media screen and (max-width: 760px) {
+    .author-content {
+        flex-direction: column; /* Stacks the author content vertically on small screens */
+        width: 90%; /* Sets the width of the author content to 90% */
+        gap: 20px; /* Adds 20px gap between author content elements */
+    }
+    article h1{
+        text-align: center; /* Centers the h1 text in the article */
+    }
+   
+    .author-photo-container {
+        order: -1; /* Moves the author photo to the top */
+    }
+
+    .author-photo {
+        width: 120px; /* Reduces the width of the author photo */
+        height: 120px; /* Reduces the height of the author photo */
+    }
+    .image-container {
+        display: block; /* Changes the image container to block layout on small screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .author-content {
+        width: 100%; /* Sets the width of the author content to 100% on very small screens */
+    }
+    article h1{
+        text-align: center; /* Centers the h1 text in the article */
+    }
+
+    /* Moves author image to the top on small screens */
+    .author-photo-container {
+        order: -1; 
+    }
+
+    .author-photo {
+        width: 100px; /* Reduces the width of the author photo */
+        height: 100px; /* Reduces the height of the author photo */
+    }
+
+    .author-text h2 {
+        text-align: center; /* Centers the h2 text of the author */
+    }
+    .author-text p {
+        text-align: left; /* Aligns the paragraph text to the left */
+    }   
+    .image-container {
+        display: block; /* Changes the image container to block layout on small screens */
+    }
+}
+
+/* Large Screens */
+@media screen and (min-width: 769px) {
+    .author-content {
+        flex-direction: row; /* Aligns author content in a row on large screens */
+    }
+
+    .author-photo-container {
+        order: 1; /* Places the author photo back to the normal position */
+    }
+
+    .author-text h2 {
+        text-align: center; /* Centers the h2 text inside author content */
+    }
+    .author-text p {
+        text-align: left; /* Aligns the paragraph text to the left */
+    }
+}
